@@ -16,11 +16,7 @@ const uri = process.env.MONGO_URL;
 
 const app = express();
 
-app.use(cors({
-  origin: ["http://localhost:3000", "http://localhost:3001"], 
-  methods: ["GET", "POST", "PUT", "DELETE"],
-  credentials: true 
-}));
+app.use(cors());
 app.use(bodyParser.json());
 
 // app.get("/addHoldings", async (req, res) => {
